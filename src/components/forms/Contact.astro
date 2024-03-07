@@ -1,0 +1,44 @@
+---
+import { Button, FormInput } from '@components/odyssey-theme';
+// Define a PhoneIcon component if needed, or use an existing icon component
+
+// Add the required form handler logic or API endpoint
+const formHandler = '/api/contact'; // Replace with your actual endpoint
+---
+
+<div class="max-w-sm mx-auto my-8 p-6 bg-white rounded-lg shadow-md">
+  <h2 class="text-2xl font-semibold mb-4">Receive a phone call from Blandy</h2>
+  <form method="POST" action={formHandler}>
+    <b />
+    <div class="mb-4">
+      <label for="name" class="block text-sm font-medium mb-1">
+        What's your name?
+      </label>
+      <FormInput id="name" name="name" type="text" placeholder="Your name" />
+    </div>
+    <div class="mb-4">
+      <label for="phone" class="block text-sm font-medium mb-1">
+        What's your phone number?
+      </label>
+      <FormInput id="phone" name="phone" type="tel" placeholder="Your phone number" />
+    </div>
+    <div class="mb-6">
+      <label for="company" class="block text-sm font-medium mb-1">
+        Where do you work?
+      </label>
+      <FormInput id="company" name="company" type="text" placeholder="Your company" />
+    </div>
+    <br />
+    <Button class="w-full flex items-center justify-center gap-2 bg-[#bd1e59] text-white">
+      Talk to Blandy
+    </Button>
+  </form>
+</div>
+
+<style>
+  /* Add your styles here */
+  form {
+    display: grid;
+    gap: 1rem;
+  }
+</style>
