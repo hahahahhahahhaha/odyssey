@@ -14,27 +14,27 @@ import Layout from '../layouts/Page.astro';
 import TextAndImageHero from '../components/sections/heros/TextAndImageHero.astro';
 
 const seo = {
-  title: 'Landing Page #1 | Astro Odyssey Theme',
-  description: 'Elevate Your Enterprise with Next-Gen AI Solutions',
+  title: 'AI Revolution in Real Estate | Your Agency Name',
+  description: 'Unlock the power of AI to transform your real estate business with our cutting-edge AI calling assistants.',
 };
 ---
 
 <Layout seo={seo}>
 
   <AnnouncementBar
-    text="Explore Our Breakthrough AI Innovations"
-    href="/blog/latest-ai-innovations/"
+    text="Welcome to the Future of Real Estate: AI-Enhanced Customer Interactions"
+    href="/contact-us"
     slot="announcement-bar"
   />
 
   <TextAndImageHero reversed>
     <div slot="text-container">
-      <h1>Revolutionize Your Business</h1>
-      <p>Embark on a transformative journey with our advanced AI & automation solutions designed to propel your business into the future.</p>
+      <h1>Transform Your Real Estate Success with AI</h1>
+      <p>Discover how our AI calling assistants can revolutionize your client interactions, lead management, and operational efficiency. Say goodbye to missed opportunities and hello to unmatched productivity.</p>
     </div>
     <div slot="btns-container">
-      <Button href="/landing-pages/landing-2" customIcon>
-        Discover More <span slot="icon"><Icon name="ic:baseline-chevron-right" /></span>
+      <Button href="/landing/contact" customIcon>
+        Explore Solutions <span slot="icon"><Icon name="ic:baseline-chevron-right" /></span>
       </Button>
     </div>
     <picture slot="image-container">
@@ -43,42 +43,39 @@ const seo = {
   </TextAndImageHero>
 
   <CustomerQuoteSection
-    quoteText="Transforming our operations with their AI solutions has set us years ahead of the competition. The value they deliver is unmatched."
-    customerName="Tech Forward CEO"
+    quoteText="Integrating AI calling assistants has not only elevated our customer service but also significantly boosted our lead conversion rates."
+    customerName="Innovative Realtor, Your City"
   />
 
   <ThreeColumnTextSection>
-	<div slot="column-1-body">
-	  <h2>Custom AI Deployments</h2>
-	  <p>Our bespoke AI solutions are crafted to seamlessly integrate with your existing systems, elevating efficiency and innovation.</p>
-	</div>
-	<Button slot="column-1-cta" href="/blog/posts/realtor-use-case">Explore AI Deployments</Button>
-  
-	<div slot="column-2-body">
-	  <h2>Breakthrough Automation</h2>
-	  <p>Dive into automation like never before, with solutions that redefine productivity and streamline your operations.</p>
-	</div>
-	<Button slot="column-2-cta" href="/blog/posts/cafe-use-case" outlined>Discover Automation</Button>
-  
-	<div slot="column-3-body">
-	  <h2>Next-Gen Intelligence</h2>
-	  <p>Unlock unparalleled insights and predictive analytics with our cutting-edge AI models, designed for decision-makers.</p>
-	</div>
-	<Button slot="column-3-cta" href="/blog/posts/remote-work-mental-health">See the Intelligence</Button>
+    <div slot="column-1-body">
+      <h2>Seamless Lead Qualification</h2>
+      <p>Our AI assistants ensure every call is a step towards a potential sale, qualifying leads with precision and efficiency.</p>
+    </div>
+    <Button slot="column-1-cta" href="/blog/posts/cafe-use-case">Learn More</Button>
+    <div slot="column-2-body">
+      <h2>Automated Scheduling</h2>
+      <p>Forget manual follow-ups. Our AI solutions automate appointment scheduling, keeping your calendar full and your focus on closing deals.</p>
+    </div>
+    <Button slot="column-2-cta" outlined href="/blog/posts/realtor-use-case">Discover How</Button>
+    <div slot="column-3-body">
+      <h2>Quick Customer Service</h2>
+      <p>Provide round-the-clock assistance and instant responses to property inquiries, elevating the customer experience.</p>
+    </div>
+    <Button slot="column-3-cta" href="/blog/posts/x-use-case">See Benefits</Button>
   </ThreeColumnTextSection>
-  
 
   <YouTubeEmbedSection url="https://www.youtube.com/watch?v=dQw4w9WgXcQ" rounded />
 
   <StickyTextImageSection>
     <div slot="text-container">
-      <h2>Why Choose Us?</h2>
-      <h3>Leading-Edge Technology</h3>
-      <p>Our commitment to innovation ensures you always stay ahead with the most advanced technologies at your fingertips.</p>
-      <h3>Proven Expertise</h3>
-      <p>Our team consists of industry veterans with a track record of delivering transformational results across sectors.</p>
-      <h3>Customized Solutions</h3>
-      <p>We believe in a tailored approach, ensuring our AI solutions perfectly align with your business goals.</p>
+      <h2>Why Partner with Us?</h2>
+      <h3>Expertise in Real Estate AI</h3>
+      <p>We specialize in the real estate market, offering tailored AI solutions that address the unique challenges and opportunities in the industry.</p>
+      <h3>Proven Results</h3>
+      <p>Our clients see remarkable improvements in lead handling, customer satisfaction, and overall sales performance.</p>
+      <h3>Custom AI Solutions</h3>
+      <p>Every real estate business is unique. Our AI calling assistants are customized to fit your specific needs and goals.</p>
     </div>
     <picture slot="image-container">
       <img src="/assets/images/landing-1/landing-sticky.jpg" alt="Astro Odyssey" loading="lazy"/>
@@ -86,11 +83,10 @@ const seo = {
   </StickyTextImageSection>
 
   <CtaCardSection background="var(--theme-surface-2)" color="var(--theme-on-surface-2)">
-    <h2>Embark on Your AI Journey</h2>
-    <p>Join forces with us and unlock the full potential of your enterprise with cutting-edge AI and automation solutions.</p>
-    <Button href="/contact-us" customIcon>
-      Start Now <span slot="icon"><Icon name="ic:baseline-chevron-right" /></span>
+    <h2>Request A Demo</h2>
+    <p>Let’s transform your business together.</p>
+    <Button href="/landing/contact" customIcon>
+    Get Started <span slot="icon"></span>
     </Button>
   </CtaCardSection>
-
 </Layout>

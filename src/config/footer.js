@@ -47,12 +47,12 @@ export const footerLists = [
 				slug: '/company/about',
 			},
 			{
-				title: 'Blog',
-				slug: '/blog',
-			},
-			{
 				title: 'Contact',
 				slug: '/company/contact',
+			},
+			{
+				title: 'Legal',
+				slug: '/company/legal',
 			},
 		],
 	},

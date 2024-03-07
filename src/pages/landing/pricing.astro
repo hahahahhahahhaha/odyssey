@@ -1,0 +1,157 @@
+---
+// Import the necessary components
+import { Button } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+
+// Define SEO metadata
+const seo = {
+  title: 'Pricing | Astro Odyssey Theme',
+  description: 'Select the perfect plan for your needs and start optimizing your workflow with our AI solutions.',
+};
+
+// Define the plans for easy management and rendering
+const plans = [
+  {
+    name: 'Basic',
+    price: '$0',
+    description: 'Perfect for individuals and small teams just getting started.',
+    features: ['Unlimited team members', '3 team sites', '100GB bandwidth/month', '100GB storage'],
+    cta: 'Get Started',
+    href: '#'
+  },
+  {
+    name: 'Pro',
+    price: '$20',
+    description: 'For teams ready to scale with advanced features and customization.',
+    features: ['Unlimited team members', 'Unlimited team sites', '1000GB bandwidth/month', '500GB storage'],
+    cta: 'Get Started',
+    href: '#'
+  },
+  {
+    name: 'Enterprise',
+    price: '$50',
+    description: 'Advanced features for large organizations and custom workflows.',
+    features: ['Unlimited team members', 'Unlimited team sites', 'Unlimited bandwidth', 'Unlimited storage'],
+    cta: 'Contact Sales',
+    href: '#'
+  }
+];
+---
+
+<Layout seo={seo}>
+  <div class="pricing-container">
+    <div class="pricing-header">
+      <h2 class="pricing-title">Simple, transparent pricing.</h2>
+      <p class="pricing-description">
+        Choose the plan that's right for your team. All plans include unlimited builds and deployments.
+      </p>
+    </div>
+    <div class="pricing-grid">
+      {plans.map((plan) => (
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <h3 class="pricing-card-title">{plan.name}</h3>
+            <p class="pricing-card-price">{plan.price}</p>
+            <p class="pricing-card-description">{plan.description}</p>
+          </div>
+          <ul class="pricing-card-features">
+            {plan.features.map((feature) => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+          <div class="pricing-card-footer">
+            <Button href={plan.href}>{plan.cta}</Button>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .pricing-container {
+    background-color: #f0f4f8;
+    border-top: 1px solid #e5e7eb;
+    padding: 3rem 0;
+  }
+  .pricing-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .pricing-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #1a202c;
+  }
+  .pricing-description {
+    color: #6b7280;
+    max-width: 600px;
+    margin: 1rem auto;
+  }
+  .pricing-grid {
+    display: grid;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .pricing-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .pricing-card-header,
+  .pricing-card-footer {
+    padding: 1.5rem;
+    text-align: center;
+  }
+  .pricing-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1a202c;
+  }
+  .pricing-card-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #10b981;
+  }
+  .pricing-card-description {
+    color: #6b7280;
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+  }
+  .pricing-card-features {
+    padding: 1.5rem;
+    list-style-type: none;
+    margin: 0;
+    background-color: #f9fafb;
+    flex-grow: 1;
+  }
+  .pricing-card-features li {
+    padding: 0.5rem 0;
+    color: #4b5563;
+    font-size: 0.875rem;
+  }
+  .pricing-card-footer Button {
+    width: 100%;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: medium;
+    border: 1px solid #e5e7eb;
+    color: #1a202c;
+    background-color: #ffffff;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  .pricing-card-footer Button:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+  }
+  @media (max-width: 768px) {
+    .pricing-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
